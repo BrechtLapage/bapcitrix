@@ -1,0 +1,128 @@
+%==============================================================================
+% Sjabloon onderzoeksvoorstel bachelorproef
+%==============================================================================
+% Gebaseerd op LaTeX-sjabloon ‘Stylish Article’ (zie voorstel.cls)
+% Auteur: Jens Buysse, Bert Van Vreckem
+
+% TODO: Compileren document:
+% 1) Vervang ‘naam_voornaam’ in de bestandsnaam door je eigen naam, bv.
+%    buysse_jens_voorstel.tex
+% 2) latexmk -pdf naam_voornaam_voorstel.tex
+% 3) biber naam_voornaam_voorstel
+% 4) latexmk -pdf naam_voornaam_voorstel.tex (1 keer)
+
+\documentclass[fleqn,10pt]{voorstel}
+
+%------------------------------------------------------------------------------
+% Metadata over het artikel
+%------------------------------------------------------------------------------
+
+\JournalInfo{HoGent Bedrijf en Organisatie} % Journal information
+\Archive{2017 - 2018} % Additional notes (e.g. copyright, DOI, review/research article)
+
+%---------- Titel & auteur ----------------------------------------------------
+
+% TODO: geef werktitel van je eigen voorstel op
+\PaperTitle{VDI: Citrix XenApp versus Citrix XenDesktop}
+\PaperType{Onderzoeksvoorstel Bachelorproef} % Type document
+
+% TODO: vul je eigen naam in als auteur, geef ook je emailadres mee!
+\Authors{Brecht Lapage\textsuperscript{1*}} % Authors
+\affiliation{\textsuperscript{1}\textit{Student Toegepaste Informatica, Valentyn Vaerwyckweg 1, 9000 Gent}} % Author affiliation
+\affiliation{*\textbf{Contact}: brecht.lapage.u8359@student.hogent.be} % Corresponding author
+
+%---------- Abstract ----------------------------------------------------------
+
+  \Abstract{Ik heb besloten om een onderzoek te doen naar Virtual Desktop Infrastructure oftewel VDI. Ik ga meer bepaald
+  	Citrix XenApp en Citrix XenDesktop bestuderen en deze met elkaar vergelijken. Tevens zal ik toelichten waarom
+  	ik specifiek voor deze producten gekozen heb. Dit onderzoek is nodig zodat bedrijven makkelijk kunnen te weten
+  	komen voor welke Citrix oplossing ze moeten kiezen. Een specifieke case heb ik gevonden in het bedrijf Orbid
+  	dat 90 medewerkers telt. Welke Citrix oplossing is voor hun het interessantst? Hierbij moeten we ook rekening
+  	houden met hun klanten die natuurlijk allemaal verschillende eisen hebben.
+}
+
+%---------- Onderzoeksdomein en sleutelwoorden --------------------------------
+% TODO: Sleutelwoorden:
+%
+% Het eerste sleutelwoord beschrijft het onderzoeksdomein. Je kan kiezen uit
+% deze lijst:
+%
+% - Mobiele applicatieontwikkeling
+% - Webapplicatieontwikkeling
+% - Applicatieontwikkeling (andere)
+% - Systeem- en netwerkbeheer
+% - Mainframe
+% - E-business
+% - Databanken en big data
+% - Machine learning en kunstmatige intelligentie
+% - Andere (specifieer)
+%
+% De andere sleutelwoorden zijn vrij te kiezen
+
+\Keywords{Systeem- en netwerkbeheer. VDI --- Citrix --- Orbid} % Keywords
+\newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
+
+%---------- Titel, inhoud -----------------------------------------------------
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+\maketitle % Print the title and abstract box
+\tableofcontents % Print the contents section
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%------------------------------------------------------------------------------
+% Hoofdtekst
+%------------------------------------------------------------------------------
+
+%---------- Inleiding ---------------------------------------------------------
+
+\section{Introductie} % The \section*{} command stops section numbering
+\label{sec:introductie}
+
+Ik ga de verschillen tussen Citrix XenApp en Citrix XenDesktop onderzoeken. Ik wil dit onderzoeken omdat het veelgebruikte applicaties zijn in bedrijven en omdat het belangrijk is dat je kiest voor het juiste product. Ik wil de verschillen aantonen en de voor- en nadelen van beide producten belichten.
+
+De onderzoeksvragen luiden:
+
+\begin{itemize}
+  \item Wat zijn de verschillen tussen Citrix XenApp en Citrix XenDesktop?
+  \item Welk Citrix product is voor Orbid het interessantst?
+\end{itemize}
+
+%---------- Stand van zaken ---------------------------------------------------
+
+\section{State-of-the-art}
+\label{sec:state-of-the-art}
+
+Er zijn nog niet echt onderzoeken uitgevoerd die specifiek de verschillen tussen XenApp en XenDesktop uitlichten, maar er zijn wel al enkele artikels verschenen die kort de verschillen aanhalen. Zo is er het artikel van \textcite{2} die onder meer aanhaalt dat XenApp gebruikers de look en feel van een Windows Server machine krijgen terwijl XenDesktop gebruikers de look en feel van een Windows desktop machine krijgen. Het artikel van \textcite{1} heeft het dan weer meer over wanneer je welke applicatie het best gebruikt. Beide auteurs hebben het ook over het feit dat XenDesktop de beste oplossing is voor grote organisaties met veel verschillende soorten gebruikers die hun desktops willen virtualiseren én die ook nog eens veel resources nodig hebben. Het verschil met mijn onderzoek is dat ik dieper wil ingaan op deze verschillen en waarom bedrijven nu voor XenApp of voor XenDesktop zouden moeten kiezen.
+
+
+%---------- Methodologie ------------------------------------------------------
+\section{Methodologie}
+\label{sec:methodologie}
+
+Ik ga allereerst een literatuurstudie uitvoeren om zoveel mogelijk informatie omtrent XenApp en XenDesktop te bekomen. Ik wil tevens hetgeen ik in theorie tegenkom in de literatuurstudie zelf in de praktijk zien door het uitvoeren van simulaties. Ik ga dus zelf een XenApp en XenDesktop omgeving nabootsen om zo in de praktijk te zien wat nu het beste is voor welke situatie en dus ook specifiek voor Orbid. Het nabootsen van de omgeving gebeurt op Interoute, dat is een virtueel data center waar ik krachtige machines ter beschikking heb die deze software aankunnen. Ik ga tevens bij Orbid enkele vragen moeten stellen omtrent hun noden, samen met mijn bevindingen omtrent XenApp en XenDesktop zal ik dan kunnen beslissen welk product voor hun het interessantst is.
+
+%---------- Verwachte resultaten ----------------------------------------------
+\section{Verwachte resultaten}
+\label{sec:verwachte_resultaten}
+
+Bij mijn resultaten zullen dus al zeker de verschillen tussen XenApp en XenDesktop zitten. Enkele van deze resultaten zullen de functies zijn die XenDesktop wel heeft en XenApp niet. Hier wordt zeker en vast de meerprijs die XenDesktop met zich meebrengt aangehaald. Er zullen ook gebruikerservaringen verwoord zijn in de resultaten bij het gebruik van XenApp en XenDesktop, deze zullen onder meer spreken over gebruiksvriendelijkheid, performantie, personalisatie van gebruikers, etcetera.
+
+%---------- Verwachte conclusies ----------------------------------------------
+\section{Verwachte conclusies}
+\label{sec:verwachte_conclusies}
+
+Ik verwacht dat XenApp voor de meeste bedrijven wel voldoende zal zijn doordat het het goedkoopst is en toch wel een tool is met veel mogelijkheden. XenDesktop is duurder en is dus naar verwachting enkel nodig als bedrijven echt die functies nodig hebben die enkel XenDesktop heeft. Orbid werkt echter samen met enkele grote klanten en dus vermoed ik dat Orbid XenDesktop soms zal nodig hebben.
+
+%------------------------------------------------------------------------------
+% Referentielijst
+%------------------------------------------------------------------------------
+% TODO: de gerefereerde werken moeten in BibTeX-bestand ``biblio.bib''
+% voorkomen. Gebruik JabRef om je bibliografie bij te houden en vergeet niet
+% om compatibiliteit met Biber/BibLaTeX aan te zetten (File > Switch to
+% BibLaTeX mode)
+
+\phantomsection
+\printbibliography[heading=bibintoc]
+
+\end{document}
