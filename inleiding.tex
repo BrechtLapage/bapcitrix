@@ -4,19 +4,22 @@
 
 \chapter{Inleiding}
 \label{ch:inleiding}
-
-De inleiding moet de lezer alle nodige informatie verschaffen om het onderwerp te begrijpen zonder nog externe werken te moeten raadplegen \autocite{Pollefliet2011}. Dit is een doorlopende tekst die gebaseerd is op al wat je over het onderwerp gelezen hebt (literatuuronderzoek).
-
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz. naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\TeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin, gebruik je \texttt{$\backslash${}textcite\{\}}.
-Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backslash${}autocite\{\}}. Hieronder een voorbeeld van elk.
-
-\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
-
 Deze bachelorproef handelt over Citrix XenApp en Citrix XenDesktop. Citrix XenApp en Citrix XenDesktop bieden een veilige omgeving aan voor virtuele applicaties en desktops. Ik ga dieper in op de verschillen tussen deze twee producten en wil hierbij de case van Orbid oplossen. Orbid is een bedrijf dat 90 medewerkers telt en ik wil nagaan welk product voor hun het interessantst is.
 
 Dankzij applicatievirtualisatie in de vorm van Citrix XenApp kunnen Windowsapplicaties benaderd worden vanaf elk toestel met een internetverbinding. De applicaties worden dus gehost op een gedeelde computer waarbij de gebruiker enkel moet beschikken over Citrix Receiver en een internetvebrinding. Citrix Receiver is de client van Citrix die u toegang verleent tot XenApp- en Xendesktop-omgevingen.
 
-XenDesktop is een voorbeeld van VDI, oftewel Virtual Desktop Infrastructure. Je krijgt dus toegang tot een volledige desktop die op afstand gehost wordt. XenApp en XendDesktop kunnen perfect gecombineerd worden. Het plaatsen van krachtige systemen die dan benaderd worden op afstand is deels een gevolg van BYOD, wat "Bring Your Own Device" betekent. Werknemers moeten steeds vaker overal kunnen werken en daarbij kunnen ze niet altijd rekenen op een heel krachtige computer. Door systemen beschikbaar te maken via Remote Desktop Services kunnen de werknemers overal een krachtige computer ter beschikking hebben.
+XenDesktop is een voorbeeld van VDI, oftewel Virtual Desktop Infrastructure. Je krijgt dus toegang tot een volledige desktop die dus ergens gehost wordt. XenApp en XenDesktop kunnen perfect gecombineerd worden. Het plaatsen van krachtige systemen die dan benaderd worden op afstand heeft als voordeel dat je makkelijk software kan updaten en dat je dit overal ter wereld kan uitvoeren. Je hoeft niet naar de eindgebruiker zelf te gaan om het probleem op te lossen of de update uit te voeren, je kan het probleem overal ter wereld oplossen doordat de applicaties en de desktops nu eenmaal centraal beheerd worden.
+
+In deze bachelorproef wordt er gebruikt gemaakt van een Citrix Workspace die mij is aangeboden door Mathias Alleyn(Senior Engineer bij Citrix). In deze workspace kan je XenApp, XenDesktop en nog vele andere Citrix producten testen in een gehoste omgeving.
+
+De onderzoeksvragen waarrond deze bachelorproef draait zijn dus:
+\begin{itemize}
+\item Wat zijn de verschillen tussen Citrix XenApp en Citrix XenDesktop?
+\item Welk Citrix product is voor Orbid het interessantst?
+\begin{itemize}
+	
+Het spreekt voor zich dat er eerst op zoek wordt gegaan naar de mogelijkheden en de verschillen tussen deze 2 producten alvorens er kan gekeken worden naar welk product er nu het meest geschikt is voor Orbid.
+
 
 
 
@@ -36,6 +39,48 @@ Geschiedenis Citrix
 
 Wat is VDI?
 Virtual Desktop Infrastructure oftewel VDI is een techniek waarbij desktops in een virtuele omgeving gedraaid worden. Deze desktops draaien op een server. Je kan de desktop bereiken via een thin-client, pc, laptop of tablet. Een belangrijke opmerking hierbij is dat het lijkt alsof je bezig bent met een lokale installatie. Een voorbeeld van Virtual Desktop Infrastructure is in dit geval XenDesktop, hierbij gaat het om desktopvirtualisatie. XenApp is per definitie geen voorbeeld van VDI, het is namelijk een voorbeeld van applicatievirtualisatie, die applicaties draaien natuurlijk ook op een desktop waardoor je het ook kan zien als een soort van desktopvirtualisatie.
+
+Citrix Workspace
+Alle tests worden uitgevoerd in een Citrix Workspace. Mijn testomgeving omvat:
+\begin{itemize}
+	\item XenApp/XenDesktop 7.15
+	\item XenMobile 10.7
+	\item NetScaler 12.0 (Build 53.13)
+	\item StoreFront 3.12
+	\newline
+	Hosted Desktops & VDIs (Including Linux and Windows 10)
+	\item Windows Server 2012
+	\item Windows Serevr 2016
+	\item Windows 7
+	\item Windows 10
+	\newline
+	Hosted Applications:
+	\item Office 2013/2016
+	\item Healthcare
+	\item Financial
+	\item Sales
+	\item Admin Tools
+	\newline
+	Mobile Applications:
+	\item Secure Mail
+	\item Secure Web
+	\item Secure Notes
+	\item Secure Tasks
+	\item ShareFile
+	\item Receiver
+	\item ShareFile StorageZones Controller 5.1
+	\item AppDNA 7.15
+	
+	\newline
+	Platform details :
+	\item Citrix XenServer 7.0
+	\item 128 GB Ram
+	
+\end{itemize}
+
+AFBEELDING TONEN
+
+
 
 \section{Probleemstelling en Onderzoeksvragen}
 \label{sec:onderzoeksvragen}
